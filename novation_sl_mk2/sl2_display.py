@@ -1,4 +1,5 @@
 from enum import Enum
+import codecs
 
 SYSEX_HEADER = "F0 00 20 29 03 03 12 00 04 00 "
 SYSEX_AUTOMAP_ON = SYSEX_HEADER + "01 01 F7";
@@ -12,8 +13,9 @@ def writeString(row, text):
     def str2HexList(s):
         res = [] 
         for i in s:
-            res.append(i.encode('hex'))
+            res.append(hex(ord(i))[2:])
         return res
+        
     return SYSEX_HEADER + " ".join(["02", "01", "00"] + [paddedInt(row), "04"] + str2HexList(text) + ["00", "F7"])
 
 

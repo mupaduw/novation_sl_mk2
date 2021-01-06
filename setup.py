@@ -21,7 +21,7 @@ URL = 'https://github.com/mupaduw/novation_sl_mk2'
 EMAIL = 'chrisbc@artisan.co.nz'
 AUTHOR = 'Chris B Chamberlain'
 REQUIRES_PYTHON = '>=3.7.0'
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
