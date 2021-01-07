@@ -68,7 +68,7 @@ class Panel(object):
     
     def set_active_row(self, row):
         # print("Set active row:", row)
-        self._active = self._controls.keys()[row]
+        self._active = list(self._controls.keys())[row]
 
     @property
     def active_controls(self):
